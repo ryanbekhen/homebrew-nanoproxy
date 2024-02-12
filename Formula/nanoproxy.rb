@@ -5,21 +5,21 @@
 class Nanoproxy < Formula
   desc "Simple Socks5 Proxy written in Go"
   homepage "https://github.com/ryanbekhen/nanoproxy"
-  version "0.12.7"
+  version "0.12.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.7/nanoproxy_Darwin_arm64.tar.gz"
-      sha256 "af9c324cd20fe106c7ca79d99f1e90a0b4077bd16f46da7703123bd2de6dba4a"
+    if Hardware::CPU.intel?
+      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.8/nanoproxy_Darwin_x86_64.tar.gz"
+      sha256 "f774c539dfb20bdda302b2780aef7e41aafae8f48be5032d2b9c52bb1e641093"
 
       def install
         bin.install "nanoproxy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.7/nanoproxy_Darwin_x86_64.tar.gz"
-      sha256 "81d0d9d602c81e32b1d427074f5af93adb92d75ae9121dd41efa1ff65f0d7b94"
+    if Hardware::CPU.arm?
+      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.8/nanoproxy_Darwin_arm64.tar.gz"
+      sha256 "2600fa8ec4fd72a11d78486f85ad4a28e67ebc216e6c9657215d25da98185bf1"
 
       def install
         bin.install "nanoproxy"
@@ -28,25 +28,25 @@ class Nanoproxy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.7/nanoproxy_Linux_x86_64.tar.gz"
-      sha256 "9a1200a985d75c39f29664f3c6c4935bc666ca76370a45258285fb7c43df4182"
-
-      def install
-        bin.install "nanoproxy"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.7/nanoproxy_Linux_armv7.tar.gz"
-      sha256 "c2132ace4ee29ecf584e3e3c90d613e7373a5da16f8b6b42c19cdee80b2986d5"
+      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.8/nanoproxy_Linux_armv7.tar.gz"
+      sha256 "39bffc40c68362e43e3e57363bdd4aae2769063b0f075cd3fceb56a2a5f9c371"
 
       def install
         bin.install "nanoproxy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.7/nanoproxy_Linux_arm64.tar.gz"
-      sha256 "14ce94e80d04fc17ee4965c7199957db555aa2c917dbdee6682c223799d950d9"
+      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.8/nanoproxy_Linux_arm64.tar.gz"
+      sha256 "735c548b964c7888fdc581295295ee93971872e2728d95c8941ef39e505d1381"
+
+      def install
+        bin.install "nanoproxy"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ryanbekhen/nanoproxy/releases/download/v0.12.8/nanoproxy_Linux_x86_64.tar.gz"
+      sha256 "5ff34ddd407ff084e56b2345b6442b1206ce901430bcaaf260fa582bbd267f8d"
 
       def install
         bin.install "nanoproxy"
