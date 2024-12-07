@@ -3,5 +3,7 @@
 Homebrew Formulae to @ryanbekhen/nanoproxy binaries, powered by @goreleaser
 
 ```sh
+brew tap ryanbekhen/nanoproxy
+
 brew install nanoproxy
 ```
