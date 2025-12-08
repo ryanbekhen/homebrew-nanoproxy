@@ -33,9 +33,5 @@ cask "nanoproxy" do
     end
   end
 
-  postflight do
-    bin.install "nanoproxy"
-  end
-
   # No zap stanza required
 end
