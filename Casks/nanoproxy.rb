@@ -3,7 +3,7 @@ cask "nanoproxy" do
   name "nanoproxy"
   desc "Simple Socks5 Proxy written in Go"
   homepage "https://github.com/ryanbekhen/nanoproxy"
-  version "0.15.7"
+  version "0.16.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "nanoproxy" do
   on_macos do
     on_intel do
       url "https://github.com/ryanbekhen/nanoproxy/releases/download/v#{version}/nanoproxy_Darwin_x86_64.tar.gz"
-      sha256 "5f836ad8dd7e0de98935b24d0ccd5ec8b79271a8fe6a6f976d5c73033229cc98"
+      sha256 "feab8776b910b6312013da33c8f82d1c697b01599b695ec7eced0ed3e86f3aa9"
     end
     on_arm do
       url "https://github.com/ryanbekhen/nanoproxy/releases/download/v#{version}/nanoproxy_Darwin_arm64.tar.gz"
-      sha256 "0fd3899c4633557e2076f733b9bbd5e50f8fb72d1d8c10aa57598e280ee7836e"
+      sha256 "5c9456585c38d33e0799c058cf4338706c1a6682ab7d9d45852079920f42a592"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ryanbekhen/nanoproxy/releases/download/v#{version}/nanoproxy_Linux_x86_64.tar.gz"
-      sha256 "526bf5983c74c1e018dd88b48af96530cbd2cef4a446c76e0ca7899abdda9f47"
+      sha256 "fb33e7c82ba9a327634f2b838e0242fd075de8448824a6834c498f36d8dcff56"
     end
     on_arm do
       url "https://github.com/ryanbekhen/nanoproxy/releases/download/v#{version}/nanoproxy_Linux_arm64.tar.gz"
-      sha256 "ebb887a6078dbfb583da057076999064f9ec0c9b0ab6d6c8b1230a4d03d69dde"
+      sha256 "e1fe1fc115104ed9b2979ff904ac048e001e6a40ca6f14d98dfa7cdbf5dc80a2"
     end
   end
 
